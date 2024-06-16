@@ -14,6 +14,7 @@
 	swww
 	rofi-wayland
 	powerline-fonts
+	nerdfonts
   ]; 
   fonts.packages = with pkgs; [
 	(nerdfonts.override { fonts = ["FiraCode"]; })
