@@ -24,7 +24,14 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+   networking.wireless = {
+   enable = true;
+   userControlled.enable = true;
+  #interfaces =["wlp82s0"];
+   #environmentFile = "/run/secrets/wireless.env";
+   #networks."@SSID_HOME@".psk = "@PSK_HOME@";
+   networks."Heights Alliance 1A".psk = "Allmight=Dadmight";
+  };  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   nix.settings.experimental-features = [ "nix-command" "flakes"];
