@@ -77,6 +77,7 @@
 	shellAliases = {
 		nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
 		nixConfig = "cd /etc/nixos/";
+		config = "cd ~/.config/";
 		vim = "nvim";
 	};
   };
