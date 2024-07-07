@@ -4,6 +4,8 @@
 
 { config, lib, pkgs,inputs, ... }:
 {
+  nix.gc.automatic = true;
+  nix.gc.dates = "03:15";
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
