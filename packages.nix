@@ -18,6 +18,7 @@
 		neovim
 
 		#other
+		nautilus
 		wget
 		htop
 		konsole
