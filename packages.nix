@@ -18,7 +18,7 @@
 		neovim
 
 		#other
-		nautilus
+		dolphin
 		wget
 		htop
 		konsole
