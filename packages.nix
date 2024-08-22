@@ -13,6 +13,7 @@
 		bottom
 		python3
 		tree-sitter  		
+		gh
 		#text editing
 		vim
 		neovim
