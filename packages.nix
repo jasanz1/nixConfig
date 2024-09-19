@@ -17,6 +17,7 @@
 		gleam
 		erlang
  		elixir
+ 		rebar3
 		#text editing
 		vim
 		neovim
