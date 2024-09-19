@@ -15,6 +15,8 @@
 		tree-sitter  		
 		gh
 		gleam
+		erlang
+ 		elixir
 		#text editing
 		vim
 		neovim
