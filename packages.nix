@@ -14,10 +14,18 @@
 		python3
 		tree-sitter  		
 		gh
+		gleam
 		#text editing
 		vim
 		neovim
-
+		tmux
+		bash
+		bc
+		coreutils
+		gawk
+		git
+		jq
+		playerctl
 		#other
 		dolphin
 		wget

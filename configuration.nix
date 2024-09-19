@@ -76,6 +76,10 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+programs.neovim.defaultEditor = true;
+
+
+
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

@@ -67,20 +67,23 @@
   #
   #  /etc/profiles/per-user/jacob/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    
-  };
-  programs.bash = { 
-	enable = true;
-	enableCompletion = true;
-	shellAliases = {
-		nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
-		nixConfig = "cd /etc/nixos/";
-		config = "cd ~/.config/";
-		vim = "nvim";
+  programs={ 
+	bash = { 
+		enable = true;
+		enableCompletion = true;
+		shellAliases = {
+			nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+			nixConfig = "cd /etc/nixos/";
+			config = "cd ~/.config/";
+			vim = "nvim";
+		};
+  	};
+	neovim = {
+		enable = true;
+		defaultEditor = true;
 	};
   };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
