@@ -22,6 +22,7 @@
 		vim
 		neovim
 		tmux
+		tmux-sessionizer
 		bash
 		bc
 		coreutils
@@ -31,6 +32,7 @@
 		playerctl
 		#other
 		dolphin
+		qutebrowser
 		wget
 		htop
 		konsole
