@@ -21,6 +21,7 @@
 		#text editing
 		vim
 		neovim
+		vimer
 		tmux
 		tmux-sessionizer
 		bash
@@ -32,6 +33,7 @@
 		playerctl
 		#other
 		dolphin
+		mpv
 		qutebrowser
 		wget
 		htop
