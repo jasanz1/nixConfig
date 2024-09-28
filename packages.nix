@@ -18,6 +18,7 @@
 		erlang
  		elixir
  		rebar3
+ 		zig
 		#text editing
 		vim
 		neovim
