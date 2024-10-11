@@ -66,7 +66,6 @@
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
-   sound.enable = true;
    security.rtkit.enable = true;
    services.pipewire = {
      enable = true;
