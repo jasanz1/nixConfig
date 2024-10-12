@@ -19,6 +19,7 @@
  		elixir
  		rebar3
  		zig
+		lua-language-server
 		#text editing
 		vim
 		neovim
