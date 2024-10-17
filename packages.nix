@@ -15,7 +15,7 @@
 		tree-sitter  		
 		gh
 		gleam
-		erlang
+		erlang_27
  		elixir
  		rebar3
  		zig
