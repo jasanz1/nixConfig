@@ -36,6 +36,7 @@
 		#other
 		dolphin
 		mpv
+		xclip
 		qutebrowser
 		wget
 		htop
