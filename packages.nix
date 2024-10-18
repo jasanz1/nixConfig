@@ -20,6 +20,8 @@
  		rebar3
  		zig
 		lua-language-server
+		gnumake
+		cmake
 		#text editing
 		vim
 		neovim
