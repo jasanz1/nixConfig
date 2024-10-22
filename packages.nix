@@ -22,6 +22,7 @@
 		lua-language-server
 		gnumake
 		cmake
+		redis
 		#text editing
 		vim
 		neovim
