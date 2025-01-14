@@ -7,9 +7,9 @@
      isNormalUser = true;
      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
      packages = with pkgs; [
-       tree
-       discord
-       brave
+      tree
+      discord
+      zed
      ];
    };
 	home-manager = {
