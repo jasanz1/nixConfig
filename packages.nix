@@ -24,6 +24,7 @@
 		cmake
 		redis
 		python3
+		pipenv
 		#text editing
 		vim
 		neovim
