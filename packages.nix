@@ -23,6 +23,7 @@
 		gnumake
 		cmake
 		redis
+		python3
 		#text editing
 		vim
 		neovim
