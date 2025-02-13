@@ -41,6 +41,7 @@
 		jq
 		playerctl
 		#other
+		zip
 		dolphin
 		mpv
 		xclip
