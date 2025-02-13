@@ -41,6 +41,7 @@
 		jq
 		playerctl
 		#other
+		unzip
 		zip
 		dolphin
 		mpv
