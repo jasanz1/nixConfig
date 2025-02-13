@@ -17,12 +17,14 @@
 		gleam
 		erlang_27
  		elixir
+ 		elixir-ls
  		rebar3
  		zig
 		lua-language-server
 		gnumake
 		cmake
 		redis
+		sqlite
 		python3
 		pipenv
 		#text editing
