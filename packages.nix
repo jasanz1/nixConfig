@@ -47,9 +47,9 @@
 		mpv
 		xclip
 		qutebrowser
+		konsole
 		wget
 		htop
-		konsole
 		git
 		];
 
