@@ -7,6 +7,7 @@
 		rustc
 		go
 		nodejs_22
+		pnpm
 		ripgrep
 		lazygit
 		gdu
