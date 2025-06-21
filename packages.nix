@@ -28,7 +28,6 @@
 		sqlite
 		python3
 		pipenv
-		python312Packages.pip
 		#text editing
 		vim
 		neovim
