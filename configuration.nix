@@ -76,7 +76,7 @@
   services.libinput.enable = true;
   environment.variables.EDITOR = "nvim";
   programs.neovim.defaultEditor = true;
-
+  services.logind.lidSwitchExternalPower = "ignore";
 
 
 
@@ -95,7 +95,6 @@
 
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
