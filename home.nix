@@ -79,6 +79,11 @@
 			nixConfig = "cd /etc/nixos/";
 			config = "cd ~/.config/";
 			vim = "nvim";
+			cat = "bat";
+			grep = "rg";
+			ls = "exa";
+			tree = "exa --tree";
+			find = "fd";
 		};
   	};
 	neovim = {

@@ -52,6 +52,7 @@
 		wget
 		htop
 		git
+		fd
 		];
 
 }
