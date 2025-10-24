@@ -67,8 +67,8 @@
   #
   #  /etc/profiles/per-user/jacob/etc/profile.d/hm-session-vars.sh
   #
-	home.sessionPath = [
- 		"${builtins.getEnv "HOME"}/.cargo/bin"
+ home.sessionPath = [
+    "$HOME/.cargo/bin"
   ];
   programs={ 
 	bash = { 
