@@ -67,6 +67,9 @@
   #
   #  /etc/profiles/per-user/jacob/etc/profile.d/hm-session-vars.sh
   #
+	home.sessionPath = [
+ 		"${builtins.getEnv "HOME"}/.cargo/bin"
+  ];
   programs={ 
 	bash = { 
 		enable = true;

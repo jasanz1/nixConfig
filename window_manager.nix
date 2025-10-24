@@ -23,12 +23,10 @@
   	enable = true;
 	extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
-
-  services.xserver = {	
-	enable = true;
-	displayManager.gdm = {
-		enable = true;
-		wayland = true;
+	services = {
+		displayManager.gdm = {
+			enable = true;
+			wayland = true;
 		};
 	};
   programs = { 

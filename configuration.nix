@@ -76,7 +76,7 @@
   services.libinput.enable = true;
   environment.variables.EDITOR = "nvim";
   programs.neovim.defaultEditor = true;
-  services.logind.lidSwitchExternalPower = "ignore";
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 
 
 
