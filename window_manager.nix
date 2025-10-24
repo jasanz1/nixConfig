@@ -12,13 +12,13 @@
 	dunst
 	libnotify
 	swww
-	rofi-wayland
+	rofi
 	powerline-fonts
-	nerdfonts
+	# nerdfonts
   ]; 
   fonts.packages = with pkgs; [
-	(nerdfonts.override { fonts = ["FiraCode"]; })
-];
+		nerd-fonts.fira-code
+	];
   xdg.portal = {
   	enable = true;
 	extraPortals = [pkgs.xdg-desktop-portal-gtk];

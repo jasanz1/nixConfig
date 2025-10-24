@@ -44,11 +44,11 @@
 		#other
 		unzip
 		zip
-		dolphin
+		kdePackages.dolphin
+		kdePackages.konsole
 		mpv
 		xclip
 		qutebrowser
-		konsole
 		wget
 		htop
 		git
