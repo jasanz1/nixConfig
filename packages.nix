@@ -2,6 +2,10 @@
 {
 	environment.systemPackages = with pkgs;[
 		# programing
+		bootdev-cli
+		kubernetes
+		docker
+		minikube
 		gcc
 		cargo
 		rustc
@@ -28,6 +32,7 @@
 		sqlite
 		python3
 		pipenv
+		pkl
 		#text editing
 		vim
 		neovim
@@ -52,6 +57,7 @@
 		wget
 		htop
 		git
+		net-tools
 		fd
 		];
 

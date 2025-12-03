@@ -92,7 +92,7 @@
   # };
 
   # List services that you want to enable:
-
+  virtualisation.docker.enable = true;
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
   # Open ports in the firewall.
