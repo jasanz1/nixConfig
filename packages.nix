@@ -33,6 +33,7 @@
 		python3
 		pipenv
 		pkl
+		nurl
 		#text editing
 		vim
 		neovim
@@ -47,6 +48,10 @@
 		jq
 		playerctl
 		#other
+		bat
+		ripgrep
+		eza
+		fd
 		unzip
 		zip
 		kdePackages.dolphin
