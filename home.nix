@@ -71,6 +71,12 @@
     "$HOME/.cargo/bin"
   ];
   programs={ 
+  fzf = {
+		enable = true;
+		enableFishIntegration = true;
+		enableBashIntegration = true;
+		enableZshIntegration = true;
+	};
 	bash = { 
 		enable = true;
 		enableCompletion = true;

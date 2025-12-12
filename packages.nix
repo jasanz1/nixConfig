@@ -1,4 +1,4 @@
-{config,lib, pkgs,...}:
+{config,lib, pkgs, ...}:
 {
 	environment.systemPackages = with pkgs;[
 		# programing
@@ -12,7 +12,6 @@
 		go
 		nodejs_22
 		pnpm
-		ripgrep
 		lazygit
 		gdu
 		bottom
@@ -48,6 +47,7 @@
 		jq
 		playerctl
 		#other
+		fzf
 		bat
 		ripgrep
 		eza
