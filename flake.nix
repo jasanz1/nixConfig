@@ -2,16 +2,16 @@
   description = "Nixos config flake";
 
   inputs = {
-    pkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    pkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     ghostty.url = "github:ghostty-org/ghostty";
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "pkgs-unstable";
+      inputs.nixpkgs.follows = "pkgs";
     };
   };
 
-  outputs = { self, pkgs-unstable,ghostty, ... }@inputs: {
-    nixosConfigurations.default = pkgs-unstable.lib.nixosSystem {
+  outputs = { self, pkgs,ghostty, ... }@inputs: {
+    nixosConfigurations.default = pkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         {environment.systemPackages = [
