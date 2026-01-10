@@ -9,11 +9,31 @@
 		mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true"];
 		})
 	)
-	dunst
-	libnotify
-	swww
-	rofi
-	powerline-fonts
+		bluez
+		blueman
+		material-icons
+		colloid-gtk-theme      # GTK theme package
+    colloid-icon-theme
+		catppuccin
+		everforest-gtk-theme
+		gruvbox-gtk-theme
+		rose-pine-gtk-theme
+		rose-pine-icon-theme
+		libnotify
+		swww
+		wofi
+		fish
+		starship
+		swaynotificationcenter
+		wallust
+		wayland-bongocat
+		fastfetch
+		powerline-fonts
+		waytrogen
+		imagemagick
+		glib
+		gsettings-desktop-schemas
+		dconf
 	# nerdfonts
   ]; 
   fonts.packages = with pkgs; [
@@ -30,6 +50,7 @@
 		};
 	};
   programs = { 
+		dconf.enable = true;
 	hyprland = {
 	  enable = true;
 	  xwayland.enable = true;

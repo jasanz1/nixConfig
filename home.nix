@@ -67,36 +67,36 @@
   #
   #  /etc/profiles/per-user/jacob/etc/profile.d/hm-session-vars.sh
   #
- home.sessionPath = [
+ 	home.sessionPath = [
     "$HOME/.cargo/bin"
   ];
   programs={ 
-  fzf = {
-		enable = true;
-		enableFishIntegration = true;
-		enableBashIntegration = true;
-		enableZshIntegration = true;
-	};
-	bash = { 
-		enable = true;
-		enableCompletion = true;
-		shellAliases = {
-			nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
-			nixConfig = "cd /etc/nixos/";
-			config = "cd ~/.config/";
-			vim = "nvim";
-			cat = "bat";
-			grep = "rg";
-			ls = "exa";
-			tree = "exa --tree";
-			find = "fd";
+  	fzf = {
+			enable = true;
+			enableFishIntegration = true;
+			enableBashIntegration = true;
+			enableZshIntegration = true;
 		};
+		bash = {
+			enable = true;
+			enableCompletion = true;
+			shellAliases = {
+				nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+				nixConfig = "cd /etc/nixos/";
+				config = "cd ~/.config/";
+				vim = "nvim";
+				cat = "bat";
+				grep = "rg";
+				ls = "exa";
+				tree = "exa --tree";
+				find = "fd";
+			};
   	};
-	neovim = {
-		enable = true;
-		defaultEditor = true;
-			
-	};
+		neovim = {
+			enable = true;
+			defaultEditor = true;
+
+		};
   };
 
   # Let Home Manager install and manage itself.

@@ -46,6 +46,7 @@
 		git
 		jq
 		playerctl
+		obsidian
 		#other
 		fzf
 		bat
