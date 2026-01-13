@@ -81,7 +81,7 @@
 			enable = true;
 			enableCompletion = true;
 			shellAliases = {
-				nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#default";
+				nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#$(hostname)";
 				nixConfig = "cd /etc/nixos/";
 				config = "cd ~/.config/";
 				vim = "nvim";
