@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo nixos-rebuild switch --flake /etc/nixos/#default
+sudo nixos-rebuild switch --flake /etc/nixos/#$(hostname)
 
 git clone https://github.com/jasanz1/.Dotfiles.git ~/.Dotfiles
 
