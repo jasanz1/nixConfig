@@ -75,11 +75,13 @@ with lib;
       };
       
       # Bluetooth services
-      bluetooth.enable = true;
       blueman.enable = true;
+    };
+
+    hardware.bluetooth.enable = true;
+
+    services = {
       
-      # Audio
-      pipewire.bluez.enable = true;
       
       # X11 configuration
       xserver.xkb.layout = "us";

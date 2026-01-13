@@ -3,7 +3,7 @@
 let
   inherit (pkgs.lib) mkOption types;
 in
-{
+rec {
   # Helper function to validate host configuration requirements
   validateHostConfig = { hostname, profile, modules ? [] }:
     let

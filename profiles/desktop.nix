@@ -12,14 +12,11 @@
   ];
 
   # Desktop-specific system configuration
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-  };
+  services.xserver.enable = true;
+  services.displayManager.gdm.enable = true;
 
   # Audio support for desktop
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -36,7 +33,7 @@
   services.printing.enable = true;
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     openFirewall = true;
   };
 
@@ -67,10 +64,10 @@
     vlc
     
     # System utilities for desktop
-    gnome.nautilus
-    gnome.file-roller
-    gnome.eog
-    gnome.evince
+    nautilus
+    file-roller
+    eog
+    evince
     
     # Desktop development tools
     vscode
@@ -83,8 +80,8 @@
   # Enable common desktop fonts
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
     liberation_ttf
     fira-code
     fira-code-symbols
