@@ -87,10 +87,6 @@
     fira-code-symbols
   ];
 
-  # Desktop-specific networking
-  networking.networkmanager.enable = true;
-  networking.wireless.enable = lib.mkForce false; # Disable wpa_supplicant in favor of NetworkManager
-
   # Enable location services for desktop
   services.geoclue2.enable = true;
 

@@ -3,9 +3,14 @@
 
 {
   # Wireless networking configuration
-  networking.wireless = {
-    enable = true;
+  networking = {
+    networkmanager.wifi.backend = "iwd";
+    wireless= {
+      iwd = { 
+        enable = true;
+        settings.Settings.autoConnect = true;
+      };
     userControlled.enable = true;
-    networks."Heights Alliance 1A".psk = "Allmight=Dadmight";
+    };
   };
 }
