@@ -12,6 +12,7 @@ with lib;
     databases.enable = mkEnableOption "database tools";
     kubernetes.enable = mkEnableOption "Kubernetes tools";
     nix.enable = mkEnableOption "Nix development tools";
+    ai.enable = mkEnableOption "AI development tools";
   };
 
   config = mkIf config.modules.development.tools.enable {
@@ -39,6 +40,9 @@ with lib;
     ] ++ optionals config.modules.development.tools.nix.enable [
       # Nix tools
       nurl
+    ] ++ optionals config.modules.development.tools.ai.enable [
+      # Nix tools
+        opencode
     ];
 
     # Enable Docker service if containers are enabled
