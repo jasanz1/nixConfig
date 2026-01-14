@@ -26,5 +26,6 @@
     databases.enable = lib.mkDefault true;
     kubernetes.enable = lib.mkDefault true;
     nix.enable = lib.mkDefault true;
-  };
+    ai.enable = lib.mkDefault true;
+  }
 }
