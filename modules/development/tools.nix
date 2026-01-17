@@ -13,8 +13,7 @@ with lib;
     kubernetes.enable = mkEnableOption "Kubernetes tools";
     nix.enable = mkEnableOption "Nix development tools";
     ai.enable = mkEnableOption "AI development tools";
-    terraform.enable = mkEnableOption "Terraform development tools";
-
+    cloudDev.enable = mkEnableOption "Cloud development tools";
   };
 
   config = mkIf config.modules.development.tools.enable {
@@ -44,8 +43,9 @@ with lib;
       nurl
     ] ++ optionals config.modules.development.tools.ai.enable [
         opencode
-    ] ++ optionals config.modules.development.tools.terraform.enable [
+    ] ++ optionals config.modules.development.tools.cloudDev.enable [
         terraform
+        awscli
     ];
 
     # Enable Docker service if containers are enabled

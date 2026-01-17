@@ -27,7 +27,7 @@
     kubernetes.enable = lib.mkDefault true;
     nix.enable = lib.mkDefault true;
     ai.enable = lib.mkDefault true;
-    terraform.enable = lib.mkDefault true;
+    cloudDev.enable = lib.mkDefault true;
 
   };
 
