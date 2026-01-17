@@ -45,7 +45,7 @@ with lib;
         opencode
     ] ++ optionals config.modules.development.tools.cloudDev.enable [
         terraform
-        awscli
+        awscli2
     ];
 
     # Enable Docker service if containers are enabled
