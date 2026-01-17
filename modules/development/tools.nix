@@ -13,6 +13,7 @@ with lib;
     kubernetes.enable = mkEnableOption "Kubernetes tools";
     nix.enable = mkEnableOption "Nix development tools";
     ai.enable = mkEnableOption "AI development tools";
+
   };
 
   config = mkIf config.modules.development.tools.enable {
