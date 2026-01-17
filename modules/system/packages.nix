@@ -33,6 +33,7 @@ with lib;
       tmux-sessionizer
     ] ++ optionals config.modules.system.packages.utilities.enable [
       # System utilities
+      lsof
       fzf
       bat
       ripgrep
