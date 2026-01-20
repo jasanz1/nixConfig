@@ -69,7 +69,7 @@ with lib;
     # Services
     services = {
       # Display manager
-      displayManager.gdm = {
+      displayManager.ly = {
         enable = true;
         wayland = true;
       };

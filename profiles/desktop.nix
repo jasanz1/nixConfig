@@ -13,7 +13,7 @@
 
   # Desktop-specific system configuration
   services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
+  services.displayManager.ly.enable = true;
 
   # Audio support for desktop
   services.pulseaudio.enable = false;
