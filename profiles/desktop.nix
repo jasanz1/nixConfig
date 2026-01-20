@@ -13,7 +13,7 @@
 
   # Desktop-specific system configuration
   services.xserver.enable = true;
-  services.displayManager.ly = {
+  services.displayManager.gdm = {
       enable = true;
       wayland.enable = true;
     };
