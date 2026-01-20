@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "pkgs";
     };
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "pkgs";
+    };
   };
 
   outputs = { self, pkgs, ghostty, ... }@inputs:

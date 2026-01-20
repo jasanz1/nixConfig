@@ -39,6 +39,7 @@
 
   # Enable desktop modules with appropriate defaults
   modules.desktop.hyprland.enable = lib.mkDefault true;
+  modules.desktop.mangowc.enable = lib.mkDefault true;
   
   modules.development = {
     languages.enable = lib.mkDefault true;

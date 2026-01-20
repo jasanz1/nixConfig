@@ -4,6 +4,7 @@
 {
   imports = [
     ./hyprland.nix
+    ./mangowc.nix
   ];
 
   # Enable Hyprland by default for desktop systems
