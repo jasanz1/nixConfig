@@ -3,27 +3,37 @@
 with lib;
 
 {
-  options.modules.desktop.mangowc = {
-    enable = mkEnableOption "MangoWC compositor";
-  };
-
-  config = mkIf config.modules.desktop.mangowc.enable {
-    environment.systemPackages = with pkgs;
-      [
-        inputs.mango.packages.${pkgs.system}.default
-        foot
-        wofi
-        waybar
-        swaybg
-      ];
-
-    services.xserver.displayManager.sessionData.desktopEntries = {
-      mangowc = {
-        name = "MangoWC";
-        exec = "mangowc";
-        desktopNames = [];
-        categories = [];
-      };
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+  outputs =
+    inputs@{ self, flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      debug = true;
+      systems = [ "x86_64-linux" ];
+      flake = {
+        nixosConfigurations = {
+          hostname = inputs.nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+              inputs.mango.nixosModules.mango
+              {
+                programs.mango.enable = true;
+                environment.systemPackages = with pkgs; [
+                  foot
+                  wofi
+                  waybar
+                  swaybg
+                ];
+              }
+            ];
+          };
+        };
+      };
+    };
 }
