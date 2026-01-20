@@ -16,5 +16,14 @@ with lib;
         waybar
         swaybg
       ];
+
+    services.xserver.displayManager.sessionData.desktopEntries = {
+      mangowc = {
+        name = "MangoWC";
+        exec = "mangowc";
+        desktopNames = [];
+        categories = [];
+      };
+    };
   };
 }
