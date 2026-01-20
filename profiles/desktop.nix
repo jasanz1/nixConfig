@@ -13,7 +13,10 @@
 
   # Desktop-specific system configuration
   services.xserver.enable = true;
-  services.displayManager.ly.enable = true;
+  services.displayManager.ly = {
+      enable = true;
+      wayland.enable = true;
+    };
 
   # Audio support for desktop
   services.pulseaudio.enable = false;

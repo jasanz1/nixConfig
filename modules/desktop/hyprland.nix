@@ -66,13 +66,6 @@ with lib;
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     };
 
-    # Services
-    services = {
-      # Display manager
-      displayManager.ly = {
-        enable = true;
-        wayland = true;
-      };
       
       # Bluetooth services
       blueman.enable = true;
