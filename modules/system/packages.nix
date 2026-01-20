@@ -44,6 +44,7 @@ with lib;
       htop
       jq
       playerctl
+      yazi
     ] ++ optionals config.modules.system.packages.media.enable [
       # Media tools
       mpv
