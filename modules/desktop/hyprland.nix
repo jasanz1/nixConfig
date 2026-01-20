@@ -66,7 +66,8 @@ with lib;
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     };
 
-      
+    # Services
+    services = {
       # Bluetooth services
       blueman.enable = true;
     };
