@@ -26,6 +26,7 @@ with lib;
       zip
     ] ++ optionals config.modules.system.packages.textEditing.enable [
       # Text editing
+      obsidian
       vim
       neovim
       vimer
