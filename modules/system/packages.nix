@@ -18,7 +18,7 @@ with lib;
     environment.systemPackages = with pkgs; [
       # Core system utilities (always included)
       coreutils
-      qutebrowser
+      vivaldi
       bash
       bc
       gawk
