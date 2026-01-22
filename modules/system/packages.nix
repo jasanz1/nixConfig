@@ -34,6 +34,7 @@ with lib;
       tmux-sessionizer
     ] ++ optionals config.modules.system.packages.utilities.enable [
       # System utilities
+      ncdu
       lsof
       fzf
       bat
