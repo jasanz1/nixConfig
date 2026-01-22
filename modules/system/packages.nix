@@ -29,6 +29,7 @@ with lib;
       obsidian
       vim
       neovim
+      neovide
       vimer
       tmux
       tmux-sessionizer

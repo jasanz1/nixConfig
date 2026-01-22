@@ -22,7 +22,7 @@ in
       wofi
       waybar
       swaybg
-      swaync 
+      swaynotificationcenter
       waytrogen 
       waybar 
       fcitx5 
