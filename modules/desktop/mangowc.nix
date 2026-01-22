@@ -22,6 +22,18 @@ in
       wofi
       waybar
       swaybg
+      swaync 
+      waytrogen 
+      waybar 
+      fcitx5 
+      wl-clip-persist 
+      sway-audio-idle-inhibit 
+      hyprpolkitagent 
+      udiskie 
+      easyeffects 
+      gnome-keyring
+      swayidle 
+      wlogout
     ];
 
     environment.etc."xsessions/mango.desktop".text = ''
