@@ -31,6 +31,9 @@
   nix.gc.automatic = true;
   nix.gc.dates = "03:15";
   
+  nix.optimise.automatic = true;
+  nix.optimise.dates = "03:45";
+
   # Auto upgrade
   system.autoUpgrade.enable = true;
   
