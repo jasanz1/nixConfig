@@ -30,6 +30,7 @@ with lib;
       # Container tools
       docker
       bootdev-cli
+      distrobox
     ] ++ optionals config.modules.development.tools.databases.enable [
       # Database tools
       redis

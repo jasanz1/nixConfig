@@ -66,6 +66,11 @@
           profile = "desktop";
         };
         
+        meridian = mkHost {
+          hostname = "meridian";
+          profile = "desktop";
+        };
+        
         # Example of how to add additional hosts
         # server-example = mkHost {
         #   hostname = "server-example";

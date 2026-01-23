@@ -47,6 +47,7 @@
   modules.development = {
     languages.enable = lib.mkDefault true;
     tools.enable = lib.mkDefault true;
+    tools.containers.enable = lib.mkDefault true;
   };
 
   modules.system.packages = {
