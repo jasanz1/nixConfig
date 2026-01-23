@@ -6,6 +6,7 @@
   imports = [
     ../modules/desktop
     ../modules/development
+    ../modules/gaming
     ../modules/system
     ../modules/networking
     ../modules/services
@@ -48,6 +49,15 @@
     languages.enable = lib.mkDefault true;
     tools.enable = lib.mkDefault true;
     tools.containers.enable = lib.mkDefault true;
+  };
+
+  modules.gaming = {
+    enable = lib.mkDefault false;
+    steam.enable = lib.mkDefault true;
+    wine.enable = lib.mkDefault true;
+    performance.enable = lib.mkDefault true;
+    launchers.enable = lib.mkDefault false;
+    dependencies.autoGraphics = lib.mkDefault true;
   };
 
   modules.system.packages = {
