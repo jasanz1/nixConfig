@@ -171,5 +171,4 @@ in
         message = "Steam requires nix-ld for binary compatibility";
       }
     ];
-  }
 }
