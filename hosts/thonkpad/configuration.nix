@@ -27,6 +27,9 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
+  # Enable nix-ld for gaming binaries
+  programs.nix-ld.enable = true;
+  
   # Garbage collection
   nix.gc.automatic = true;
   nix.gc.dates = "03:15";
@@ -37,16 +40,13 @@
   # Auto upgrade
   system.autoUpgrade.enable = true;
   
-  # NVIDIA GPU support
+  # NVIDIA GPU support  
   hardware.nvidia = {
     modesetting.enable = true;
     nvidiaSettings = true;
+    open = true;  # Use open source modules
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
-  
-  # Boot loader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   
   # Video driver configuration
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -57,6 +57,9 @@
   
   # Lid switch behavior
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
+  
+  # GRUB configuration for bootability
+  boot.loader.grub.devices = [ "nodev" ];
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

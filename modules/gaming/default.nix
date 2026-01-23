@@ -11,82 +11,11 @@ in
   options.modules.gaming = {
     enable = mkEnableOption "Gaming support";
     
-    # Core gaming components
-    steam = {
-      enable = mkOption {
-        type = types.bool;
-        default = true;
-        description = "Enable Steam gaming platform";
-      };
-    };
+    # Note: Core gaming options (steam, wine, performance) are defined in their respective sub-modules
     
-    wine = {
-      enable = mkOption {
-        type = types.bool;
-        default = true;
-        description = "Enable Wine/Lutris support";
-      };
-    };
+    # Note: launchers options are defined in the launchers sub-module
     
-    performance = {
-      enable = mkOption {
-        type = types.bool;
-        default = true;
-        description = "Enable gaming performance optimizations";
-      };
-    };
-    
-    launchers = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-        description = "Enable alternative game launchers";
-      };
-    };
-    
-    # Dependencies management
-    dependencies = {
-      enable = mkOption {
-        type = types.bool;
-        default = true;
-        description = "Enable gaming dependencies (required for most gaming features)";
-      };
-      
-      autoGraphics = mkOption {
-        type = types.bool;
-        default = true;
-        description = "Automatically configure graphics drivers";
-      };
-      
-      nvidiaSupport = mkOption {
-        type = types.bool;
-        default = config.hardware.nvidia.modesetting.enable or false;
-        description = "Enable NVIDIA-specific optimizations";
-      };
-      
-      amdSupport = mkOption {
-        type = types.bool;
-        default = config.hardware.amdgpu.amdvlk or false;
-        description = "Enable AMD-specific optimizations";
-      };
-    };
-    
-    # Advanced options
-    vr = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-        description = "Enable VR gaming support";
-      };
-    };
-    
-    streaming = {
-      enable = mkOption {
-        type = types.bool;
-        default = false;
-        description = "Enable game streaming support";
-      };
-    };
+    # Note: Dependencies, VR, and streaming options are defined in their respective sub-modules
   };
 
   # Import all gaming submodules
@@ -105,18 +34,13 @@ in
 
     # Core gaming assertions
     assertions = [
-      # Basic system requirements
       {
-        assertion = config.hardware.opengl.enable;
-        message = "Gaming module requires OpenGL support (hardware.opengl.enable)";
+        assertion = config.hardware.graphics.enable;
+        message = "Gaming module requires OpenGL support (hardware.graphics.enable)";
       }
       {
-        assertion = config.hardware.opengl.driSupport32Bit;
-        message = "Gaming module requires 32-bit graphics support (hardware.opengl.driSupport32Bit)";
-      }
-      {
-        assertion = config.programs.nix-ld.enable;
-        message = "Gaming module requires nix-ld for binary compatibility (programs.nix-ld.enable)";
+        assertion = config.hardware.graphics.enable32Bit;
+        message = "Gaming module requires 32-bit graphics support (hardware.graphics.enable32Bit)";
       }
       
       # Steam-specific assertions

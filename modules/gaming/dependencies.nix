@@ -32,12 +32,12 @@ in
 
   config = mkIf cfg.enable {
     # CRITICAL: 32-bit graphics support for Steam and games
-    hardware.opengl.driSupport32Bit = true;
+    hardware.graphics.enable32Bit = true;
     
     # OpenGL support with gaming-specific packages
-    hardware.opengl.enable = true;
-    hardware.opengl.extraPackages = with pkgs; [
-      mesa.drivers
+    hardware.graphics.enable = true;
+    hardware.graphics.extraPackages = with pkgs; [
+      mesa
       # Vulkan support
       vulkan-loader
       vulkan-validation-layers
@@ -46,15 +46,6 @@ in
       nvidia-vaapi-driver
     ] ++ optionals cfg.amdSupport [
       # AMD Vulkan support
-      amdvlk
-    ];
-
-    # 32-bit Vulkan support
-    hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [
-      vulkan-loader
-    ] ++ optionals cfg.nvidiaSupport [
-      nvidia-vaapi-driver
-    ] ++ optionals cfg.amdSupport [
       amdvlk
     ];
 
@@ -107,8 +98,7 @@ in
       modesetting.enable = true;
       nvidiaSettings = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
-      
-      # DRM modesetting is handled by nvidia.modesetting.enable
+      open = mkDefault false;  # Use open source modules to avoid assertion
       
       # Power management for gaming laptops
       powerManagement.enable = mkDefault true;

@@ -172,16 +172,16 @@ in
     # Wine-specific assertions for dependency validation
     assertions = [
       {
-        assertion = config.hardware.opengl.driSupport32Bit;
-        message = "Wine requires 32-bit graphics support (hardware.opengl.driSupport32Bit)";
+        assertion = config.hardware.graphics.enable32Bit;
+        message = "Wine requires 32-bit graphics support (hardware.graphics.enable32Bit)";
       }
       {
-        assertion = config.programs.nix-ld.enable;
+        assertion = config.hardware.graphics.enable;
+        message = "Wine requires OpenGL support (hardware.graphics.enable)";
+      }
+      {
+        assertion = cfg.wine.enable -> config.programs.nix-ld.enable;
         message = "Wine requires nix-ld for binary compatibility";
-      }
-      {
-        assertion = cfg.wine.enable -> config.hardware.opengl.enable;
-        message = "Wine requires OpenGL support (hardware.opengl.enable)";
       }
     ];
 

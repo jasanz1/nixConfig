@@ -135,16 +135,32 @@ in
     # Emulator-specific assertions
     assertions = [
       {
-        assertion = cfg.retroarch.enable -> config.hardware.opengl.enable;
+        assertion = cfg.retroarch.enable -> config.hardware.graphics.enable;
         message = "RetroArch requires OpenGL support";
       }
       {
-        assertion = cfg.emulators.dolphin -> config.hardware.opengl.driSupport32Bit;
+        assertion = cfg.emulators.dolphin -> config.hardware.graphics.enable32Bit;
         message = "Dolphin requires 32-bit OpenGL support";
+      }
+      {
+        assertion = cfg.emulators.pcsx2 -> config.hardware.graphics.enable32Bit;
+        message = "PCSX2 requires 32-bit OpenGL support";
+      }
+      {
+        assertion = cfg.emulators.rpcs3 -> config.hardware.graphics.enable32Bit;
+        message = "RPCS3 requires 32-bit OpenGL support";
+      }
+      {
+        assertion = cfg.emulators.yuzu -> config.hardware.graphics.enable32Bit;
+        message = "Yuzu requires 32-bit OpenGL support";
       }
       {
         assertion = cfg.heroic.enable -> config.programs.nix-ld.enable;
         message = "Heroic requires nix-ld for binary compatibility";
+      }
+      {
+        assertion = cfg.legendary.enable -> config.programs.nix-ld.enable;
+        message = "Legendary requires nix-ld for binary compatibility";
       }
     ];
 
