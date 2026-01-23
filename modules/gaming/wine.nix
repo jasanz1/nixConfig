@@ -155,43 +155,8 @@ in
       };
     };
 
-    # Wine-specific desktop entries
-    xdg.desktopEntries = {
-      winecfg = {
-        name = "Wine Configuration";
-        exec = "${pkgs.wine}/bin/winecfg";
-        icon = "wine";
-        categories = [ "System" "Settings" ];
-      };
-      
-      wine-uninstaller = {
-        name = "Wine Uninstaller";
-        exec = "${pkgs.wine}/bin/uninstaller";
-        icon = "wine";
-        categories = [ "System" ];
-      };
-      
-      wine-regedit = {
-        name = "Wine Registry Editor";
-        exec = "${pkgs.wine}/bin/regedit";
-        icon = "wine";
-        categories = [ "System" ];
-      };
-    } // optionalAttrs cfg.lutris.enable {
-      lutris = {
-        name = "Lutris";
-        exec = "${pkgs.lutris}/bin/lutris";
-        icon = "lutris";
-        categories = [ "Game" ];
-      };
-    } // optionalAttrs cfg.bottles.enable {
-      bottles = {
-        name = "Bottles";
-        exec = "${pkgs.bottles}/bin/bottles";
-        icon = "com.usebottles.bottles";
-        categories = [ "Game" "System" ];
-      };
-    };
+    # Note: Desktop entries should be configured via home-manager or manually
+    # xdg.desktopEntries is not a standard NixOS option
 
     # Wine-specific file associations
     xdg.mime = {

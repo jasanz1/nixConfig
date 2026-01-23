@@ -343,17 +343,11 @@ in
     };
 
     # Gaming-specific memory management
-    vm.swappiness = mkIf cfg.performance.enable (mkDefault 10);
+    # Memory optimization notes
+    # Memory settings should be configured per-host
 
-    # Gaming-specific desktop entries
-    xdg.desktopEntries = {
-      gaming-info = {
-        name = "Gaming Information";
-        exec = "${pkgs.bash}/bin/bash -c 'echo \"Gaming module is active\"'";
-        icon = "applications-games";
-        categories = [ "System" ];
-      };
-    };
+    # Note: Desktop entries should be configured via home-manager or manually
+    # xdg.desktopEntries is not a standard NixOS option
 
     # Note: User groups for gaming (input, audio, video) should be configured per-host
     # Example: users.users.<username>.extraGroups = [ "input" "audio" "video" ];

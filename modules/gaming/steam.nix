@@ -152,29 +152,8 @@ in
       };
     };
 
-    # Steam-specific desktop entries
-    xdg.desktopEntries = {
-      steam-big-picture = {
-        name = "Steam (Big Picture Mode)";
-        exec = "${pkgs.steam}/bin/steam -bigpicture";
-        icon = "steam";
-        categories = [ "Game" ];
-      };
-      
-      steam-streaming = {
-        name = "Steam Streaming";
-        exec = "${pkgs.steam}/bin/steam -streaming";
-        icon = "steam";
-        categories = [ "Game" ];
-      };
-    } // optionalAttrs cfg.gamescope.enable {
-      steam-gamescope = {
-        name = "Steam (Gamescope)";
-        exec = "${pkgs.gamescope}/bin/gamescope -w 1920 -h 1080 -f -- ${pkgs.steam}/bin/steam";
-        icon = "steam";
-        categories = [ "Game" ];
-      };
-    };
+    # Note: Desktop entries should be configured via home-manager or manually
+    # xdg.desktopEntries is not a standard NixOS option
 
     # Steam-specific assertions for dependency validation
     assertions = [

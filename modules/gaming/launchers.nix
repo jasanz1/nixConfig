@@ -115,57 +115,8 @@ in
 
     # Launcher-specific environment variables will be handled in main gaming module
 
-    # Gaming-specific desktop entries
-    xdg.desktopEntries = {
-      heroic-epic = mkIf (cfg.heroic.enable && cfg.heroic.epic) {
-        name = "Heroic (Epic Games)";
-        exec = "${pkgs.heroic}/bin/heroic --epic";
-        icon = "heroic";
-        categories = [ "Game" ];
-      };
-      
-      heroic-gog = mkIf (cfg.heroic.enable && cfg.heroic.gog) {
-        name = "Heroic (GOG)";
-        exec = "${pkgs.heroic}/bin/heroic --gog";
-        icon = "heroic";
-        categories = [ "Game" ];
-      };
-      
-      retroarch = mkIf cfg.retroarch.enable {
-        name = "RetroArch";
-        exec = "${pkgs.retroarch}/bin/retroarch";
-        icon = "retroarch";
-        categories = [ "Game" "Emulator" ];
-      };
-      
-      dolphin = mkIf cfg.emulators.dolphin {
-        name = "Dolphin Emulator";
-        exec = "${pkgs.dolphin-emu}/bin/dolphin-emu";
-        icon = "dolphin-emu";
-        categories = [ "Game" "Emulator" ];
-      };
-      
-      pcsx2 = mkIf cfg.emulators.pcsx2 {
-        name = "PCSX2";
-        exec = "${pkgs.pcsx2}/bin/pcsx2";
-        icon = "pcsx2";
-        categories = [ "Game" "Emulator" ];
-      };
-      
-      rpcs3 = mkIf cfg.emulators.rpcs3 {
-        name = "RPCS3";
-        exec = "${pkgs.rpcs3}/bin/rpcs3";
-        icon = "rpcs3";
-        categories = [ "Game" "Emulator" ];
-      };
-      
-      yuzu = mkIf cfg.emulators.yuzu {
-        name = "Yuzu";
-        exec = "${pkgs.yuzu}/bin/yuzu";
-        icon = "yuzu";
-        categories = [ "Game" "Emulator" ];
-      };
-    };
+    # Note: Desktop entries should be configured via home-manager or manually
+    # xdg.desktopEntries is not a standard NixOS option
 
     # Game directories will be created on first use
 

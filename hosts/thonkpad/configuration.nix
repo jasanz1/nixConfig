@@ -37,9 +37,19 @@
   # Auto upgrade
   system.autoUpgrade.enable = true;
   
+  # NVIDIA GPU support
+  hardware.nvidia = {
+    modesetting.enable = true;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+  
   # Boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
+  # Video driver configuration
+  services.xserver.videoDrivers = [ "nvidia" ];
   
   # Editor
   environment.variables.EDITOR = "nvim";
