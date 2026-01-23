@@ -4,7 +4,7 @@
   # Define user accounts
   users.users.jacob = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ]; # Enable 'sudo' for the user
+    extraGroups = [ "wheel" "docker" "input" "audio" "video" ]; # Enable 'sudo', gaming for the user
     packages = with pkgs; [
       tree
     ];
