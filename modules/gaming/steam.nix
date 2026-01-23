@@ -16,6 +16,7 @@ in
         default = true;
         description = "Enable Steam Remote Play";
       };
+      
       openFirewall = mkOption {
         type = types.bool;
         default = true;
@@ -29,6 +30,7 @@ in
         default = false;
         description = "Enable Steam Dedicated Server support";
       };
+      
       openFirewall = mkOption {
         type = types.bool;
         default = false;
@@ -84,24 +86,23 @@ in
       
       # Proton management
       protonup-qt    # GUI for managing Proton versions
-    ] ++ optionals cfg.proton.geProton [
-      # GE-Proton will be managed through protonup-qt
     ];
 
-    # Steam-specific services
-    systemd.user.services = {
-      # Steam input service for controller support
-      steam-input = {
-        description = "Steam Input Service";
-        wantedBy = [ "graphical-session.target" ];
-        serviceConfig = {
-          ExecStart = "${pkgs.steam}/bin/steam -silent -no-cef-sandbox";
-          Restart = "on-failure";
-        };
-      };
+    # Steam-specific environment variables
+    environment.sessionVariables = {
+      # Steam runtime optimizations
+      STEAM_RUNTIME = "1";
+      
+      # Proton optimizations
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = mkIf cfg.proton.enable 
+        "$HOME/.steam/root/compatibilitytools.d";
+      
+      # Steam input
+      STEAM_INPUT_METHOD = "gamepadui";
+      
+      # Steam flatpak compatibility
+      STEAM_USE_RUNTIME_AUDIO = "1";
     };
-
-    # Steam-specific environment variables will be handled in main gaming module
 
     # Steam-specific firewall rules
     networking.firewall = mkMerge [
@@ -110,7 +111,6 @@ in
         allowedTCPPorts = [ 27036 27037 ];
         allowedUDPPorts = [ 27031 27032 27033 27034 27035 27036 ];
       })
-      
       (mkIf cfg.dedicatedServer.openFirewall {
         # Steam Dedicated Server ports
         allowedTCPPorts = [ 27015 27016 27017 27018 27019 ];
@@ -124,7 +124,7 @@ in
       steam-hardware.enable = true;
       
       # Additional controller support
-      xpadneo.enable = mkDefault true;
+      xpadneo.enable = true;
     };
 
     # Steam-specific security settings
@@ -135,26 +135,6 @@ in
         owner = "root";
       };
     };
-      
-      # Steam input - user groups configured per-host
-    };
-
-    # Steam-specific system configurations
-    systemd = {
-      # Steam input service
-      services.steam-input = {
-        description = "Steam Input Service";
-        wantedBy = [ "graphical-session.target" ];
-        serviceConfig = {
-          ExecStart = "${pkgs.steam}/bin/steam -silent -no-cef-sandbox";
-          Restart = "on-failure";
-          User = "%i";
-        };
-      };
-    };
-
-    # Note: Desktop entries should be configured via home-manager or manually
-    # xdg.desktopEntries is not a standard NixOS option
 
     # Steam-specific assertions for dependency validation
     assertions = [
@@ -171,4 +151,5 @@ in
         message = "Steam requires nix-ld for binary compatibility";
       }
     ];
+  };
 }
