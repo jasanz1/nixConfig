@@ -128,12 +128,13 @@ in
     };
 
     # Steam-specific security settings
-    security = {
-      # Allow Steam to set capabilities for performance
-      wrappers.steam = {
+    security.wrappers = {
+      steam = {
         source = "${pkgs.steam}/bin/steam";
         capabilities = "cap_sys_nice+ep";
+        owner = "root";
       };
+    };
       
       # Steam input - user groups configured per-host
     };
@@ -170,5 +171,5 @@ in
         message = "Steam requires nix-ld for binary compatibility";
       }
     ];
-  };
+  }
 }
