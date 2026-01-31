@@ -24,6 +24,7 @@ with lib;
     ] ++ optionals config.modules.development.tools.git.enable [
       # Git tools
       git
+      jujutsu
       lazygit
       gh
     ] ++ optionals config.modules.development.tools.containers.enable [
