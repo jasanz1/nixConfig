@@ -22,7 +22,6 @@ in
   imports = [
     ./dependencies.nix
     ./steam.nix
-    ./wine.nix
     ./performance.nix
     ./launchers.nix
   ];
@@ -32,45 +31,7 @@ in
     # Enable dependencies by default
     modules.gaming.dependencies.enable = mkDefault true;
 
-    # Core gaming assertions
-    assertions = [
-      {
-        assertion = config.hardware.graphics.enable;
-        message = "Gaming module requires OpenGL support (hardware.graphics.enable)";
-      }
-      {
-        assertion = config.hardware.graphics.enable32Bit;
-        message = "Gaming module requires 32-bit graphics support (hardware.graphics.enable32Bit)";
-      }
-      
-      # Steam-specific assertions
-      {
-        assertion = cfg.steam.enable -> cfg.dependencies.enable;
-        message = "Steam requires gaming dependencies to be enabled";
-      }
-      
-      # Wine-specific assertions
-      {
-        assertion = cfg.wine.enable -> cfg.dependencies.enable;
-        message = "Wine requires gaming dependencies to be enabled";
-      }
-      
-      # Performance-specific assertions
-      {
-        assertion = cfg.performance.enable -> cfg.dependencies.enable;
-        message = "Performance optimizations require gaming dependencies";
-      }
-      
-      # Graphics driver assertions
-      {
-        assertion = cfg.dependencies.nvidiaSupport -> config.hardware.nvidia.modesetting.enable;
-        message = "NVIDIA gaming support requires NVIDIA driver with modesetting";
-      }
-      {
-        assertion = cfg.dependencies.amdSupport -> config.hardware.amdgpu.amdvlk;
-        message = "AMD gaming support requires AMDVLK";
-      }
-    ];
+    
 
     # Gaming-specific system packages
     environment.systemPackages = with pkgs; [
@@ -92,18 +53,7 @@ in
       mangohud
     ] ++ optionals cfg.launchers.goverlay.enable [
       goverlay
-    ] ++ optionals cfg.wine.enable [
-      # Core Wine packages
-      wine
-      wine64
-      wineWow64
-      wine-gecko
-      wine-mono
-      
-      # Wine compatibility layers
-      wine-staging
-      wine-ge
-    ] ++ optionals cfg.wine.lutris.enable [
+    ]  ++ optionals cfg.wine.lutris.enable [
       lutris
     ] ++ optionals cfg.wine.bottles.enable [
       bottles

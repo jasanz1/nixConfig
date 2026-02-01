@@ -54,7 +54,6 @@
   modules.gaming = {
     enable = lib.mkDefault false;
     steam.enable = lib.mkDefault true;
-    wine.enable = lib.mkDefault true;
     performance.enable = lib.mkDefault true;
     launchers.enable = lib.mkDefault false;
     dependencies.autoGraphics = lib.mkDefault true;

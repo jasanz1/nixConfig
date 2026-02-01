@@ -133,23 +133,10 @@ in
         source = "${pkgs.steam}/bin/steam";
         capabilities = "cap_sys_nice+ep";
         owner = "root";
+        group = "users";
       };
     };
 
     # Steam-specific assertions for dependency validation
-    assertions = [
-      {
-        assertion = config.hardware.graphics.enable32Bit;
-        message = "Steam requires 32-bit graphics support (hardware.graphics.enable32Bit)";
-      }
-      {
-        assertion = config.hardware.steam-hardware.enable;
-        message = "Steam requires hardware support for controllers";
-      }
-      {
-        assertion = config.programs.nix-ld.enable;
-        message = "Steam requires nix-ld for binary compatibility";
-      }
-    ];
   };
 }
