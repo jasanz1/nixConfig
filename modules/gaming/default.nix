@@ -22,6 +22,7 @@ in
   imports = [
     ./dependencies.nix
     ./steam.nix
+    ./wine.nix
     ./performance.nix
     ./launchers.nix
   ];

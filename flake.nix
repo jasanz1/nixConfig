@@ -12,9 +12,13 @@
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "pkgs";
     };
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "pkgs";
+    };
   };
 
-  outputs = { self, pkgs, ghostty, ... }@inputs:
+  outputs = { self, pkgs, ghostty, nix-gaming, ... }@inputs:
     let
       customLib = import ./lib { inherit pkgs; };
       
