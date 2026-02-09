@@ -6,6 +6,7 @@
     ./users.nix
     ../../modules/desktop
     ../../modules/development
+    ../../modules/gaming
     ../../modules/system
     ../../modules/networking
     ../../modules/security
@@ -40,6 +41,13 @@
   # Auto upgrade
   system.autoUpgrade.enable = true;
   
+  modules.gaming = {
+    enable = lib.mkDefault false;
+    steam.enable = lib.mkDefault true;
+    performance.enable = lib.mkDefault true;
+    launchers.enable = lib.mkDefault false;
+    dependencies.autoGraphics = lib.mkDefault true;
+  };
   # NVIDIA GPU support  
   hardware.nvidia = {
     modesetting.enable = true;

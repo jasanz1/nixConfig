@@ -67,18 +67,18 @@ in
       libxkbfile
       libdrm
       wayland
-      xorg.libX11
-      xorg.libXcursor
-      xorg.libXext
-      xorg.libXi
-      xorg.libXrandr
-      xorg.libXrender
-      xorg.libXtst
-      xorg.libXfixes
-      xorg.libXcomposite
-      xorg.libXdamage
-      xorg.libXScrnSaver
-      xorg.libXinerama
+      libX11
+      libXcursor
+      libXext
+      libXi
+      libXrandr
+      libXrender
+      libXtst
+      libXfixes
+      libXcomposite
+      libXdamage
+      libXScrnSaver
+      libXinerama
     ];
 
     # Gaming kernel modules
