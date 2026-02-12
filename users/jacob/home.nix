@@ -22,6 +22,10 @@
     # # "Hello, world!" when run.
     # pkgs.hello
 
+				pkgs.bat
+				pkgs.ripgrep
+				pkgs.eza
+				pkgs.fd
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -84,7 +88,6 @@
 				nixRebuild = "sudo nixos-rebuild switch --flake /etc/nixos/#$(hostname)";
 				nixConfig = "cd /etc/nixos/";
 				config = "cd ~/.config/";
-				vim = "nvim";
 				cat = "bat";
 				grep = "rg";
 				ls = "exa";
