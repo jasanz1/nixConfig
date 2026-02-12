@@ -81,6 +81,7 @@
     # Communication
     discord
     slack
+    teamspeak6-client
   ];
 
   # Enable common desktop fonts
