@@ -50,6 +50,7 @@ with lib;
       yazi
     ] ++ optionals config.modules.system.packages.media.enable [
       # Media tools
+      rapidraw
       mpv
       xclip
     ] ++ optionals config.modules.system.packages.networking.enable [
