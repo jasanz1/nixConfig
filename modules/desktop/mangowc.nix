@@ -18,6 +18,7 @@ in
     programs.mango.enable = true;
 
     environment.systemPackages = with pkgs; [
+      brightnessctl
       foot
       wofi
       waybar

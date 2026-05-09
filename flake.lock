@@ -79,9 +79,12 @@
       "locked": {
         "lastModified": 1773791289,
         "narHash": "sha256-3LaAhSy6syWWQoz4Djsh+njXGFcRejCT1rCHKq9S0n0=",
+        "lastModified": 1773848075,
+        "narHash": "sha256-YmSHzBq39nI0wKr9vr9yHiLx5YNlYPpHf4Ubr4Kp9Qk=",
         "owner": "ghostty-org",
         "repo": "ghostty",
         "rev": "d3bd224081d3c7c5ee54df6815e44f0b5d25357b",
+        "rev": "9e6c875f334c43f1b1ea4cb8d23c1ec07c6d9f9c",
         "type": "github"
       },
       "original": {
@@ -165,9 +168,12 @@
       "locked": {
         "lastModified": 1773681856,
         "narHash": "sha256-+bRqxoFCJFO9ZTFhcCkzNXbDT3b8AEk88fyjB7Is6eo=",
+        "lastModified": 1773810247,
+        "narHash": "sha256-6Vz1Thy/1s7z+Rq5OfkWOBAdV4eD+OrvDs10yH6xJzQ=",
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "57d5560ee92a424fb71fde800acd6ed2c725dfce",
+        "rev": "d47357a4c806d18a3e853ad2699eaec3c01622e7",
         "type": "github"
       },
       "original": {
@@ -187,9 +193,12 @@
       "locked": {
         "lastModified": 1773747894,
         "narHash": "sha256-vefuuD2hHAuxMs3TqGWhwVQ3XHK0/JUePQ8ts8f2D3Q=",
+        "lastModified": 1773814207,
+        "narHash": "sha256-/6WXgttaEDKz3AYlId1NvgXt4BPiTpwVGfrj5Ytzrx4=",
         "owner": "DreamMaoMao",
         "repo": "mango",
         "rev": "17434d62624f6a6b74e00a5f9fefab10419d34b4",
+        "rev": "833d8a2ef1195471b29e6eb807ed2735388e1059",
         "type": "github"
       },
       "original": {
@@ -209,9 +218,12 @@
       "locked": {
         "lastModified": 1773715019,
         "narHash": "sha256-bJ2f57E9rEMdNc6hFIVvtWFF/WpIRCGJvT7HTnls/rg=",
+        "lastModified": 1773801820,
+        "narHash": "sha256-l4pB6hCC5K0ygw63q9T8uRiETCGlR14DL3nIwR16WvQ=",
         "owner": "fufexan",
         "repo": "nix-gaming",
         "rev": "25efde53dc1b554e912bda2be1dc2508850dbe68",
+        "rev": "741d7a97cedfe976743166c44f4b58f3ec1df72d",
         "type": "github"
       },
       "original": {
@@ -267,9 +279,12 @@
       "locked": {
         "lastModified": 1773646010,
         "narHash": "sha256-iYrs97hS7p5u4lQzuNWzuALGIOdkPXvjz7bviiBjUu8=",
+        "lastModified": 1773734432,
+        "narHash": "sha256-IF5ppUWh6gHGHYDbtVUyhwy/i7D261P7fWD1bPefOsw=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+        "rev": "cda48547b432e8d3b18b4180ba07473762ec8558",
         "type": "github"
       },
       "original": {
