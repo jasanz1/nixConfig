@@ -91,11 +91,6 @@
 				find = "fd";
 			};
   	};
-		neovim = {
-			enable = true;
-			defaultEditor = true;
-
-		};
 		bat.enable = true;
 		eza.enable = true;
 		ripgrep.enable = true;
