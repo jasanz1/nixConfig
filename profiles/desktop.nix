@@ -27,6 +27,10 @@
     pulse.enable = true;
   };
 
+  # Secret Service for libsecret apps (proton-drive)
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.gdm-password.enableGnomeKeyring = true;
+
   # Bluetooth support for desktop peripherals
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
@@ -57,6 +61,7 @@
     media.enable = lib.mkDefault true;
     networking.enable = lib.mkDefault true;
     fileManagement.enable = lib.mkDefault true;
+    privacy.enable = lib.mkDefault true;
   };
 
   # Desktop environment packages

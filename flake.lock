@@ -280,13 +280,34 @@
         "type": "github"
       }
     },
+    "proton-drive": {
+      "inputs": {
+        "nixpkgs": [
+          "pkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788017463,
+        "narHash": "sha256-UnQ2YSc453WYnUiidKeVwfAytyaZj+YLKKWNMCdbWJs=",
+        "owner": "tommasie",
+        "repo": "nix-proton-drive-cli",
+        "rev": "9c2ac94ae2a76d99dec80cb7e31fd179acbbb16f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tommasie",
+        "repo": "nix-proton-drive-cli",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "ghostty": "ghostty",
         "home-manager": "home-manager_2",
         "mango": "mango",
         "nix-gaming": "nix-gaming",
-        "pkgs": "pkgs"
+        "pkgs": "pkgs",
+        "proton-drive": "proton-drive"
       }
     },
     "scenefx": {

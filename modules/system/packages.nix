@@ -1,5 +1,5 @@
 # System packages module
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with lib;
 
@@ -12,6 +12,7 @@ with lib;
     media.enable = mkEnableOption "media tools";
     networking.enable = mkEnableOption "networking tools";
     fileManagement.enable = mkEnableOption "file management tools";
+    privacy.enable = mkEnableOption "privacy tools (Proton suite)";
   };
 
   config = mkIf config.modules.system.packages.enable {
@@ -61,6 +62,14 @@ with lib;
       # File management
       kdePackages.dolphin
       kdePackages.konsole
+    ] ++ optionals config.modules.system.packages.privacy.enable [
+      # Proton suite (VPN + Mail + Drive)
+      protonvpn-gui
+      proton-vpn-cli
+      protonmail-bridge
+      protonmail-bridge-gui
+      protonmail-desktop
+      inputs.proton-drive.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }

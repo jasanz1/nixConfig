@@ -16,6 +16,10 @@
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "pkgs";
     };
+    proton-drive = {
+      url = "github:tommasie/nix-proton-drive-cli";
+      inputs.nixpkgs.follows = "pkgs";
+    };
   };
 
   outputs = { self, pkgs, ghostty, nix-gaming, ... }@inputs:

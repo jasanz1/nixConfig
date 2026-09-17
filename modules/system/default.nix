@@ -14,5 +14,6 @@
     media.enable = lib.mkDefault true;
     networking.enable = lib.mkDefault true;
     fileManagement.enable = lib.mkDefault true;
+    privacy.enable = lib.mkDefault true;
   };
 }
