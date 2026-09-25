@@ -24,17 +24,24 @@ in
       waybar
       swaybg
       swaynotificationcenter
-      waytrogen 
-      waybar 
-      fcitx5 
-      wl-clip-persist 
-      sway-audio-idle-inhibit 
-      hyprpolkitagent 
-      udiskie 
-      easyeffects 
+      waytrogen
+      waybar
+      fcitx5
+      wl-clip-persist
+      sway-audio-idle-inhibit
+      hyprpolkitagent
+      udiskie
+      easyeffects
       gnome-keyring
-      swayidle 
+      swayidle
       wlogout
+
+      # Screenshots
+      grim
+      slurp
+      wl-clipboard
+      satty
+      wayfreeze
     ];
 
     environment.etc."xsessions/mango.desktop".text = ''
