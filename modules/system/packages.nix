@@ -64,7 +64,7 @@ with lib;
       kdePackages.konsole
     ] ++ optionals config.modules.system.packages.privacy.enable [
       # Proton suite (VPN + Mail + Drive)
-      protonvpn-gui
+      proton-vpn
       proton-vpn-cli
       protonmail-bridge
       protonmail-bridge-gui

@@ -43,10 +43,10 @@ with lib;
                     config.modules.development.languages.elixir.enable || 
                     config.modules.development.languages.gleam.enable) [
       # Erlang (shared dependency for Elixir and Gleam)
-      erlang_27
+      beam27Packages.erlang
     ] ++ optionals config.modules.development.languages.elixir.enable [
       # Elixir (requires Erlang)
-      elixir
+      beam27Packages.elixir
       elixir-ls
       rebar3
     ] ++ optionals config.modules.development.languages.gleam.enable [
