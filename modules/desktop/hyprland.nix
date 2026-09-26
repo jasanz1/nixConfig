@@ -32,8 +32,6 @@ with lib;
       catppuccin
       everforest-gtk-theme
       gruvbox-gtk-theme
-      rose-pine-gtk-theme
-      rose-pine-icon-theme
       
       # Desktop utilities
       libnotify
