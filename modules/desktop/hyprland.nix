@@ -27,7 +27,6 @@ with lib;
       catppuccin
       everforest-gtk-theme
       gruvbox-gtk-theme
-      
       # Desktop utilities
       libnotify
       awww
