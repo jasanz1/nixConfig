@@ -20,6 +20,9 @@
       url = "github:tommasie/nix-proton-drive-cli";
       inputs.nixpkgs.follows = "pkgs";
     };
+    dms = {
+      url = "github:duxlabs-dev/dux-shell";
+    };
   };
 
   outputs = { self, pkgs, ghostty, nix-gaming, ... }@inputs:

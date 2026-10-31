@@ -16,11 +16,6 @@ with lib;
 
     # System packages for Hyprland desktop environment
     environment.systemPackages = with pkgs; [
-      # Waybar with experimental features
-      (waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      }))
-      
       # Bluetooth
       bluez
       blueman
@@ -89,10 +84,6 @@ with lib;
       hyprland = {
         enable = true;
         xwayland.enable = true;
-      };
-      
-      waybar = {
-        enable = true;
       };
     };
 

@@ -1,6 +1,21 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  dmsPkgs = inputs.dms.inputs.nixpkgs.legacyPackages.${system};
+in
 {
+  imports = [
+    inputs.dms.homeModules.dank-material-shell
+  ];
+
+  programs.dank-material-shell = {
+    enable = true;
+    systemd.enable = true;
+    package = inputs.dms.packages.${system}.dms-shell;
+    quickshell.package = dmsPkgs.quickshell;
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jacob";

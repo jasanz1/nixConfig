@@ -21,11 +21,9 @@ in
       brightnessctl
       foot
       wofi
-      waybar
       swaybg
       swaynotificationcenter
       waytrogen
-      waybar
       fcitx5
       wl-clip-persist
       sway-audio-idle-inhibit
