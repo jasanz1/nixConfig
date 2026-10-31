@@ -20,7 +20,6 @@ in
     environment.systemPackages = with pkgs; [
       brightnessctl
       foot
-      wofi
       swaybg
       swaynotificationcenter
       waytrogen

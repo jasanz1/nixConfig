@@ -31,7 +31,6 @@ with lib;
       # Desktop utilities
       libnotify
       awww
-      wofi
       fish
       starship
       swaynotificationcenter
