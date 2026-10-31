@@ -66,8 +66,10 @@
   # Lid switch behavior
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
   
-  # GRUB configuration for bootability
-  boot.loader.grub.devices = [ "nodev" ];
+  # Boot loader
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 10;
+  boot.loader.efi.canTouchEfiVariables = true;
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
