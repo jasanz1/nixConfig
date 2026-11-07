@@ -45,7 +45,11 @@ with lib;
         # Nix tools
         nurl
       ] ++ optionals config.modules.development.tools.ai.enable [
-        opencode
+        (opencode.overrideAttrs (old: {
+          node_modules = old.node_modules.overrideAttrs (_: {
+            outputHash = "sha256-prx9dX7kUvs/E3zopkaPk5LXh3xJAy5sZeum/W8L7cA=";
+          });
+        }))
       ] ++ optionals config.modules.development.tools.cloudDev.enable [
         terraform
         awscli2

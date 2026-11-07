@@ -27,6 +27,11 @@
   # System configuration
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.max-jobs = 4;
+  nix.settings.cores = 4;
+
+  zramSwap.enable = true;
+  systemd.oomd.enable = false;
   
   # Enable nix-ld for gaming binaries
   programs.nix-ld.enable = true;

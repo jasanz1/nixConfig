@@ -127,16 +127,6 @@ in
       xpadneo.enable = true;
     };
 
-    # Steam-specific security settings
-    security.wrappers = {
-      steam = {
-        source = "${pkgs.steam}/bin/steam";
-        capabilities = "cap_sys_nice+ep";
-        owner = "root";
-        group = "users";
-      };
-    };
-
     # Steam-specific assertions for dependency validation
   };
 }

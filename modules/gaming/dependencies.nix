@@ -169,15 +169,5 @@ in
       ];
     };
 
-    # Security for gaming
-    security = {
-      # Allow Steam to set capabilities for performance
-      wrappers = {
-        steam = {
-          source = "${pkgs.steam}/bin/steam";
-          capabilities = "cap_sys_nice+ep";
-        };
-      };
-    };
   };
 }
